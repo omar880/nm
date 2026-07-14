@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اكتشف نمطك | اختبار شخصية شامل — تحليل عميق وتقرير مفصّل</title>
+<meta name="description" content="اختبار شخصية شامل ومجاني يكشف نمطك من بين 8 أنماط، مع تقرير تفصيلي عن نقاط قوتك وتحدياتك وعلاقاتك ومسارك المهني. مبني على نموذج الأبعاد الثلاثة العلمي.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-180.png">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<meta property="og:site_name" content="اكتشف نمطك">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:url" content="https://yoursite.com/">
+<meta property="og:image" content="https://yoursite.com/assets/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="اكتشف نمطك | اختبار شخصية شامل — تحليل عميق وتقرير مفصّل">
+<meta name="twitter:description" content="اختبار شخصية شامل ومجاني يكشف نمطك من بين 8 أنماط، مع تقرير تفصيلي عن نقاط قوتك وتحدياتك وعلاقاتك ومسارك المهني. مبني على نموذج الأبعاد الثلاثة العلمي.">
+<meta name="twitter:image" content="https://yoursite.com/assets/images/og-image.png">
+<meta name="keywords" content="اختبار شخصية, تحليل شخصية, أنماط الشخصية, اكتشف نفسك, تطوير ذاتي">
+<link rel="canonical" href="https://yoursite.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.hero-section{padding:80px 0 64px;text-align:center;border-bottom:1px solid var(--line);}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.5px;border:1px solid var(--gold-soft);border-radius:999px;padding:6px 18px;background:#FBF6EA;margin-bottom:24px;}
+.hero-section h1{font-size:clamp(32px,6vw,56px);font-weight:700;line-height:1.2;margin-bottom:20px;}
+.hero-section h1 em{font-style:normal;color:var(--gold);}
+.hero-lede{font-size:clamp(16px,2.2vw,19px);color:var(--gray);max-width:620px;margin:0 auto 36px;line-height:1.85;}
+.hero-divider{width:56px;height:3px;background:var(--gold);margin:0 auto 36px;border-radius:2px;}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.hero-meta{display:flex;gap:40px;justify-content:center;margin-top:44px;flex-wrap:wrap;}
+.hero-meta-item{text-align:center;}
+.hero-meta-item .val{font-family:'Lora',serif;font-size:28px;font-weight:700;color:var(--navy);display:block;}
+.hero-meta-item .lbl{font-size:13px;color:var(--gray);}
+.types-section{padding:72px 0;border-bottom:1px solid var(--line);}
+.section-header{text-align:center;margin-bottom:48px;}
+.section-header h2{font-size:clamp(24px,4vw,34px);font-weight:700;margin-bottom:12px;}
+.section-header p{font-size:16px;color:var(--gray);max-width:540px;margin:0 auto;line-height:1.8;}
+.types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.type-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 18px;text-align:center;transition:all .2s;cursor:pointer;text-decoration:none;display:block;}
+.type-card:hover{border-color:var(--gold-soft);box-shadow:var(--shadow-lift);transform:translateY(-3px);}
+.type-card .tc{font-family:'Lora',serif;font-weight:700;font-size:12.5px;letter-spacing:1px;color:var(--gold);margin-bottom:10px;}
+.type-card h3{font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.type-card p{font-size:13px;color:var(--gray);line-height:1.7;}
+.method-section{padding:72px 0;background:var(--paper-warm);border-bottom:1px solid var(--line);}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px;}
+.method-item{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px 24px;}
+.method-item .icon{font-size:30px;margin-bottom:14px;display:block;}
+.method-item h3{font-size:16px;font-weight:700;margin-bottom:10px;}
+.method-item p{font-size:14.5px;color:var(--gray);line-height:1.8;}
+.why-section{padding:72px 0;border-bottom:1px solid var(--line);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:48px;}
+.why-text h2{font-size:clamp(24px,3.5vw,32px);font-weight:700;margin-bottom:18px;line-height:1.3;}
+.why-text p{font-size:15.5px;color:var(--gray);line-height:1.9;margin-bottom:16px;}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.why-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:#374151;line-height:1.8;}
+.check{width:22px;height:22px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;color:var(--white);margin-top:2px;}
+.why-visual{background:var(--paper-warm);border:1px solid var(--line);border-radius:16px;padding:32px 28px;}
+.dim-item{padding:16px 0;border-bottom:1px solid var(--line);}
+.dim-item:last-child{border:none;}
+.dim-item .dt{font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;}
+.dim-item h4{font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.dim-item p{font-size:13.5px;color:var(--gray);line-height:1.75;}
+.quiz-section{padding:72px 0;border-bottom:1px solid var(--line);}
+.quiz-frame{max-width:680px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:var(--shadow-card);}
+.quiz-landing{text-align:center;}
+.quiz-landing h2{font-size:clamp(22px,4vw,28px);font-weight:700;margin-bottom:14px;}
+.quiz-landing p{font-size:15.5px;color:var(--gray);line-height:1.85;margin-bottom:28px;}
+.quiz-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;}
+.quiz-pill{background:var(--paper-warm);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;color:var(--gray);}
+.progress-wrap{margin-bottom:32px;}
+.progress-track{height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--gold);border-radius:999px;transition:width .4s ease;width:0%;}
+.progress-label{display:flex;justify-content:space-between;font-size:13px;color:var(--gray);margin-bottom:10px;}
+.stmt-dim{font-size:11.5px;font-weight:700;color:var(--gold);letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px;}
+.stmt-text{font-family:'Lora',serif;font-size:clamp(18px,3vw,23px);font-weight:600;line-height:1.6;color:var(--navy);margin-bottom:32px;}
+.likert{display:flex;flex-direction:column;gap:10px;}
+.likert-opt{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1.5px solid var(--line);border-radius:8px;padding:15px 20px;cursor:pointer;background:var(--white);transition:all .15s;font-size:15.5px;font-weight:500;font-family:inherit;color:var(--navy);text-align:right;}
+.likert-opt:hover{border-color:var(--gold);background:#FFFBF2;}
+.likert-opt .dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--line-strong);flex-shrink:0;transition:all .15s;}
+.likert-opt:hover .dot{border-color:var(--gold);background:var(--gold-soft);}
+.quiz-back{display:flex;justify-content:center;margin-top:24px;}
+.result-hero-inner{background:var(--navy);color:var(--white);border-radius:12px;padding:36px 28px;text-align:center;margin-bottom:24px;}
+.result-hero-inner .code-badge{font-family:'Lora',serif;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold-soft);border:1px solid rgba(232,201,122,0.4);border-radius:999px;padding:6px 18px;display:inline-block;margin-bottom:16px;}
+.result-hero-inner h2{font-size:28px;font-weight:700;margin-bottom:10px;}
+.result-hero-inner .rtagline{font-size:15px;color:#C7CEDD;line-height:1.8;}
+.result-section{margin-bottom:22px;padding:20px;background:var(--paper-warm);border-radius:10px;border:1px solid var(--line);}
+.result-section h3{font-size:15.5px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+.r-list{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.r-list li{font-size:14px;line-height:1.8;color:#374151;padding-right:16px;position:relative;}
+.r-list li::before{content:'—';position:absolute;right:0;color:var(--gold);font-weight:700;}
+.r-list.red li::before{color:#E05252;}
+.r-paras p{font-size:14px;color:#374151;line-height:1.9;margin-bottom:10px;}
+.mrow{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px;}
+.mrow .mn{width:170px;flex-shrink:0;font-weight:600;color:var(--navy);}
+.mrow .mt{flex:1;height:5px;background:var(--line);border-radius:999px;overflow:hidden;}
+.mrow .mf{height:100%;background:var(--gold);border-radius:999px;transition:width 1s ease;width:0%;}
+.mrow .mp{width:30px;color:var(--gray);font-size:11.5px;}
+.ctags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;}
+.ctag{border:1px solid var(--line-strong);border-radius:999px;padding:5px 14px;font-size:13px;font-weight:600;color:var(--navy);background:var(--white);}
+.career-deep{margin-top:26px;padding-top:22px;border-top:1px dashed var(--line-strong);}
+.career-sub{margin-bottom:20px;}
+.career-sub .cs-title{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.role-cards{display:flex;flex-direction:column;gap:9px;}
+.role-card{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:12px 14px;}
+.role-card .rc-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.role-card .rc-why{font-size:13px;color:#4B5563;line-height:1.8;}
+.career-note{font-size:13.5px;color:#374151;line-height:1.85;background:var(--white);border-right:3px solid var(--gold);border-radius:6px;padding:10px 14px;}
+.career-note.warn{border-right-color:#E05252;}
+.pitfall-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.pitfall-list li{font-size:13.5px;line-height:1.8;color:#4A1A1A;background:#FFF5F5;border-right:3px solid #E05252;border-radius:6px;padding:9px 14px;}
+.career-full-cta{margin-top:8px;text-align:center;padding:16px;background:var(--white);border-radius:8px;border:1px solid var(--line-strong);}
+.career-full-cta p{font-size:13px;color:var(--gray);margin-bottom:10px;}
+.ract{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.btn-r{flex:1;min-width:130px;background:var(--navy);color:var(--white);border:none;font-weight:600;font-size:14px;padding:12px 16px;border-radius:8px;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:7px;}
+.btn-r.out{background:transparent;color:var(--navy);border:1.5px solid var(--line-strong);}
+.articles-section{padding:72px 0;background:var(--paper-warm);border-bottom:1px solid var(--line);}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+.art-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px;transition:all .2s;text-decoration:none;display:block;}
+.art-card:hover{border-color:var(--gold-soft);box-shadow:var(--shadow-card);transform:translateY(-2px);}
+.art-card .cat{font-size:11.5px;font-weight:700;color:var(--gold);letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px;}
+.art-card h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.5;}
+.art-card p{font-size:13.5px;color:var(--gray);line-height:1.75;}
+.art-card .rd{font-size:13px;font-weight:600;color:var(--gold);margin-top:12px;display:block;}
+.faq-section{padding:72px 0;border-bottom:1px solid var(--line);}
+.faq-list{max-width:720px;margin:40px auto 0;}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;}
+.faq-q{padding:20px 24px;font-size:15.5px;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+.faq-q::after{content:'＋';font-size:18px;color:var(--gold);margin-right:10px;}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-a p{font-size:15px;color:var(--gray);line-height:1.85;padding-bottom:20px;}
+.faq-item.open .faq-q::after{content:'－';}
+.faq-item.open .faq-a{max-height:300px;}
+.cta-section{padding:72px 0;text-align:center;}
+.cta-box{background:var(--navy);border-radius:20px;padding:56px 40px;max-width:720px;margin:0 auto;}
+.cta-box h2{font-size:clamp(24px,4vw,34px);font-weight:700;color:var(--white);margin-bottom:16px;}
+.cta-box p{font-size:16px;color:#C7CEDD;max-width:480px;margin:0 auto 32px;line-height:1.85;}
+.btn-cta{background:linear-gradient(90deg,var(--gold),#E8C97A);color:var(--navy);font-weight:800;font-size:17px;padding:16px 44px;border-radius:8px;border:none;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block;}
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:var(--white);padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;opacity:0;transition:all .3s;z-index:50;pointer-events:none;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+@media(max-width:920px){.types-grid{grid-template-columns:repeat(2,1fr);}.method-grid{grid-template-columns:1fr 1fr;}.art-grid{grid-template-columns:repeat(2,1fr);}.why-grid{grid-template-columns:1fr;}.why-visual{display:none;}}
+@media(max-width:580px){.types-grid{grid-template-columns:repeat(2,1fr);gap:10px;}.art-grid{grid-template-columns:1fr;}.method-grid{grid-template-columns:1fr;}.quiz-frame{padding:22px 16px;}.cta-box{padding:36px 20px;}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="mark">ن</div><div class="word">اكتشف نمطك</div></div>
+  <button class="nav-toggle" aria-label="القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="#types">الأنماط</a>
+    <a href="career/index.html">التحليل المهني</a>
+    <a href="articles/index.html">مقالات</a>
+    <a href="pages/about.html">عن الموقع</a>
+    <a href="pages/contact.html">تواصل</a>
+    <a href="#quiz" class="nav-cta">ابدأ الاختبار</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container-narrow">
+    <span class="eyebrow">★ مبني على نموذج الأبعاد الثلاثة العلمي</span>
+    <h1>افهم <em>نفسك</em> أعمق<br>من أي وقت مضى</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-lede">تحليل شخصية شامل يقيس ٣ أبعاد أساسية من خلال ٣٠ عبارة دقيقة، ليُحدد نمطك من بين ٨ أنماط — مع تقرير كامل يشمل نقاط قوتك، تحدياتك، علاقاتك، ومسارك المهني.</p>
+    <div class="hero-actions">
+      <a href="#quiz" class="btn-primary">ابدأ الاختبار المجاني ←</a>
+      <a href="pages/about.html" class="btn-outline">اعرف أكثر</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span class="val">٣٠</span><span class="lbl">عبارة دقيقة</span></div>
+      <div class="hero-meta-item"><span class="val">٨</span><span class="lbl">أنماط شخصية</span></div>
+      <div class="hero-meta-item"><span class="val">٧</span><span class="lbl">أقسام بالتقرير</span></div>
+      <div class="hero-meta-item"><span class="val">مجاني</span><span class="lbl">بالكامل</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section class="types-section" id="types">
+  <div class="container">
+    <div class="section-header"><h2>الأنماط الثمانية</h2><p>كل نمط تركيبة فريدة من ٣ أبعاد تُنتج شخصية مميزة بنقاط قوة وتحديات مختلفة</p></div>
+    <div class="types-grid">
+      <a href="types/spl.html" class="type-card"><div class="tc">SPL</div><h3>المنظّم</h3><p>دقيق وموثوق يُحوّل الفوضى إلى نظام</p></a>
+      <a href="types/spe.html" class="type-card"><div class="tc">SPE</div><h3>الراعي</h3><p>داعم وحاضر يضع راحة الآخرين أولاً</p></a>
+      <a href="types/scl.html" class="type-card"><div class="tc">SCL</div><h3>الاستراتيجي</h3><p>يرى الصورة الكاملة ويقود نحوها بثقة</p></a>
+      <a href="types/sce.html" class="type-card"><div class="tc">SCE</div><h3>المُلهم</h3><p>يحمل رؤية ويجعل الآخرين يصدّقونها</p></a>
+      <a href="types/ipl.html" class="type-card"><div class="tc">IPL</div><h3>الحِرفي</h3><p>يتقن عمله بصمت ويثق بالنتائج</p></a>
+      <a href="types/ipe.html" class="type-card"><div class="tc">IPE</div><h3>الحارس الهادئ</h3><p>وفيّ وصامد يحمي من يحب بثبات</p></a>
+      <a href="types/icl.html" class="type-card"><div class="tc">ICL</div><h3>المُحلّل</h3><p>يبحث عن الفهم العميق بعيداً عن السطحي</p></a>
+      <a href="types/ice.html" class="type-card"><div class="tc">ICE</div><h3>الحالِم</h3><p>يحمل عالماً داخلياً غنياً ويبحث عن المعنى</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <h2>لماذا فهم شخصيتك مهم فعلاً؟</h2>
+        <p>فهم شخصيتك ليس فضولاً فكرياً — إنه أداة عملية تُحسّن قراراتك اليومية وعلاقاتك واختياراتك المهنية.</p>
+        <ul class="why-list">
+          <li><span class="check">✓</span>تفهم لماذا تشعر بالاستنزاف في بعض البيئات دون غيرها</li>
+          <li><span class="check">✓</span>تُحدد المسار المهني الذي يناسب طبيعتك الحقيقية</li>
+          <li><span class="check">✓</span>تُحسّن علاقاتك بفهم كيف تختلف عمّن حولك</li>
+          <li><span class="check">✓</span>تُطوّر نقاط ضعفك بشكل موجّه لا عشوائي</li>
+          <li><span class="check">✓</span>تتخذ قرارات أكثر توافقاً مع قيمك الحقيقية</li>
+        </ul>
+      </div>
+      <div class="why-visual">
+        <div class="dim-item"><div class="dt">البُعد الأول</div><h4>مصدر الطاقة</h4><p>من أين تستمد طاقتك؟ التفاعل مع الناس أم الوقت لوحدك؟</p></div>
+        <div class="dim-item"><div class="dt">البُعد الثاني</div><h4>معالجة المعلومات</h4><p>هل تُفضّل الحقائق الملموسة أم الأفكار المجردة والاحتمالات؟</p></div>
+        <div class="dim-item"><div class="dt">البُعد الثالث</div><h4>أساس القرار</h4><p>هل يُرجّح قراراتك المنطق الموضوعي أم القيم والتعاطف؟</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method-section">
+  <div class="container">
+    <div class="section-header"><h2>كيف يعمل الاختبار؟</h2><p>منهجية علمية تُعطيك نتائج أعمق من اختبارات الخيار الثنائي التقليدية</p></div>
+    <div class="method-grid">
+      <div class="method-item"><span class="icon">📋</span><h3>٣٠ عبارة دقيقة</h3><p>موزعة بالتساوي على الأبعاد الثلاثة، كل عبارة مُصمَّمة لتقيس ميلاً سلوكياً محدداً.</p></div>
+      <div class="method-item"><span class="icon">⚖️</span><h3>سلّم تدرّج خماسي</h3><p>بدل "نعم أو لا"، تُجيب بدرجة موافقتك من خمسة مستويات — دقة أعلى بكثير.</p></div>
+      <div class="method-item"><span class="icon">📊</span><h3>تقرير شامل فوري</h3><p>٧ أقسام: نظرة عامة، نقاط قوة، تحديات، علاقات، مسار مهني، نمو شخصي، وتوزيع النتيجة.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz-section" id="quiz">
+  <div class="container">
+    <div class="section-header"><h2>ابدأ التحليل الآن</h2><p>١٢ دقيقة تُعطيك فهماً أعمق لنفسك</p></div>
+    <div class="quiz-frame">
+      <div id="qLanding" class="quiz-landing">
+        <h2>اختبار تحليل الشخصية المجاني</h2>
+        <p>جاوب على ٣٠ عبارة بصدق تام — لا إجابات صحيحة أو خاطئة. كلما كانت إجاباتك صادقة كان التحليل أدق.</p>
+        <div class="quiz-pills">
+          <span class="quiz-pill">⏱️ ١٢ دقيقة</span>
+          <span class="quiz-pill">🎯 ٣٠ عبارة</span>
+          <span class="quiz-pill">📊 تقرير مجاني</span>
+          <span class="quiz-pill">🔒 بدون تسجيل</span>
+        </div>
+        <button class="btn-primary" id="startBtn" style="font-size:17px;padding:16px 44px;">ابدأ التحليل ←</button>
+      </div>
+      <div id="qQuiz" style="display:none;">
+        <div class="progress-wrap">
+          <div class="progress-label"><span id="qLabel">العبارة ١ من ٣٠</span><span id="qPct">٠٪</span></div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <div class="stmt-dim" id="qDim"></div>
+        <div class="stmt-text" id="qText"></div>
+        <div class="likert" id="likertOptions"></div>
+        <div class="quiz-back"><button class="btn-outline" id="backBtn" style="font-size:14px;padding:10px 20px;">⟵ السابقة</button></div>
+      </div>
+      <div id="qResult" style="display:none;">
+        <div class="result-hero-inner">
+          <span class="code-badge" id="rCode"></span>
+          <h2 id="rName"></h2>
+          <p class="rtagline" id="rTagline"></p>
+        </div>
+        <div class="result-section"><h3>نظرة عامة</h3><div class="r-paras" id="rOverview"></div></div>
+        <div class="result-section"><h3>💪 نقاط القوة</h3><ul class="r-list" id="rStrengths"></ul></div>
+        <div class="result-section"><h3>⚠️ التحديات</h3><ul class="r-list red" id="rChallenges"></ul></div>
+        <div class="result-section"><h3>🤝 العلاقات</h3><div class="r-paras" id="rRelationships"></div></div>
+        <div class="result-section">
+          <h3>💼 المسار المهني</h3>
+          <div class="r-paras" id="rCareerText"></div>
+          <div class="ctags" id="rCareerTags"></div>
+
+          <div class="career-deep">
+            <div class="career-sub">
+              <div class="cs-title">🎯 وظائف محددة تناسبك</div>
+              <div class="role-cards" id="rIdealRoles"></div>
+            </div>
+            <div class="career-sub">
+              <div class="cs-title">🏢 بيئة العمل المثالية</div>
+              <div class="r-paras" id="rCareerEnv"></div>
+            </div>
+            <div class="career-sub">
+              <div class="cs-title">🧭 أسلوب القيادة والإدارة</div>
+              <div class="career-note" id="rCareerLead"></div>
+            </div>
+            <div class="career-sub">
+              <div class="cs-title">🏭 قطاعات مناسبة لك</div>
+              <div class="ctags" id="rCareerIndustries"></div>
+            </div>
+            <div class="career-sub">
+              <div class="cs-title">⚠️ أخطاء مهنية شائعة يجب تجنبها</div>
+              <ul class="pitfall-list" id="rCareerPitfalls"></ul>
+            </div>
+            <div class="career-sub">
+              <div class="cs-title">📈 مسار نموّك المهني المتوقع</div>
+              <div class="career-note" id="rCareerGrowth"></div>
+            </div>
+            <div class="career-sub">
+              <div class="cs-title">🚫 بيئات تستنزفك ويجب الحذر منها</div>
+              <div class="career-note warn" id="rCareerAvoid"></div>
+            </div>
+            <div class="career-full-cta">
+              <p>هذا ملخص فقط — التحليل المهني الكامل لنمطك أعمق بكثير</p>
+              <a id="fullCareerLink" href="career/spl.html" class="btn-r" style="display:inline-flex;text-decoration:none;justify-content:center;">📊 التحليل المهني الكامل لنمطي ←</a>
+            </div>
+          </div>
+        </div>
+        <div class="result-section"><h3>🎯 مسار النمو</h3><ul class="r-list" id="rGrowth"></ul></div>
+        <div class="result-section"><h3>📊 توزيع نتيجتك</h3><div id="matchTable"></div></div>
+        <div class="ract">
+          <button class="btn-r" id="copyBtn">📋 نسخ ملخص النتيجة</button>
+          <button class="btn-r out" id="restartBtn">🔄 إعادة الاختبار</button>
+        </div>
+        <div style="margin-top:18px;text-align:center;padding:16px;background:var(--paper-warm);border-radius:8px;border:1px solid var(--line);">
+          <p style="font-size:13.5px;color:var(--gray);margin-bottom:10px;">اقرأ التقرير الكامل لنمطك</p>
+          <a id="fullReportLink" href="types/spl.html" class="btn-r" style="display:inline-flex;text-decoration:none;justify-content:center;">التقرير الكامل لنمطي ←</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles-section">
+  <div class="container">
+    <div class="section-header"><h2>مقالات في علم الشخصية</h2><p>محتوى علمي مبسط يساعدك على فهم شخصيتك وتطبيق هذا الفهم في حياتك</p></div>
+    <div class="art-grid">
+      <a href="articles/understand-personality.html" class="art-card"><div class="cat">علم الشخصية</div><h3>كيف تفهم شخصيتك بعمق حقيقي؟</h3><p>دليل شامل يشرح الفرق بين المعرفة السطحية والفهم العميق.</p><span class="rd">اقرأ المقال ←</span></a>
+      <a href="articles/introvert-extrovert.html" class="art-card"><div class="cat">مصدر الطاقة</div><h3>الانطوائي والانبساطي: ما الفرق الحقيقي؟</h3><p>تجاوز الأفكار المغلوطة واكتشف ما يعنيه مصدر الطاقة فعلاً.</p><span class="rd">اقرأ المقال ←</span></a>
+      <a href="articles/personality-career.html" class="art-card"><div class="cat">المسار المهني</div><h3>كيف يؤثر نمطك على مسارك المهني؟</h3><p>اختر بيئة العمل التي تُطلق إمكاناتك الحقيقية.</p><span class="rd">اقرأ المقال ←</span></a>
+      <a href="articles/relationships-personality.html" class="art-card"><div class="cat">العلاقات</div><h3>لماذا نُكمّل بعضنا رغم اختلافنا؟</h3><p>فهم تفاعل الأنماط يُحوّل الخلافات إلى نقاط قوة.</p><span class="rd">اقرأ المقال ←</span></a>
+      <a href="articles/self-awareness.html" class="art-card"><div class="cat">التطوير الذاتي</div><h3>الوعي الذاتي: المهارة الأهم في عصرنا</h3><p>كيف تبني وعياً ذاتياً يُحسّن قراراتك وعلاقاتك.</p><span class="rd">اقرأ المقال ←</span></a>
+      <a href="articles/growth-mindset.html" class="art-card"><div class="cat">النمو الشخصي</div><h3>كيف تُحوّل تحديات نمطك إلى قوة؟</h3><p>عقلية النمو + معرفة نمطك = تطوير موجّه وفعّال.</p><span class="rd">اقرأ المقال ←</span></a>
+    </div>
+    <div style="text-align:center;margin-top:32px;"><a href="articles/index.html" class="btn-outline">جميع المقالات ←</a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header"><h2>أسئلة شائعة</h2><p>إجابات على أكثر الأسئلة التي نتلقاها عن الاختبار ونتائجه</p></div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">هل الاختبار علمي ودقيق؟</div><div class="faq-a"><p>الاختبار مبني على نموذج الأبعاد الثلاثة المستوحى من أبحاث علم النفس الشخصية، ويستخدم سلّم ليكرت الخماسي للحصول على دقة أعلى. كأي اختبار شخصية، هو أداة للتأمل الذاتي وليس تشخيصاً طبياً رسمياً.</p></div></div>
+      <div class="faq-item"><div class="faq-q">كم من الوقت يستغرق الاختبار؟</div><div class="faq-a"><p>الاختبار يتضمن ٣٠ عبارة ويستغرق عادة ١٠-١٥ دقيقة. ننصح بأخذ وقتك بكل عبارة لأن دقة إجاباتك تؤثر مباشرة على دقة نتيجتك.</p></div></div>
+      <div class="faq-item"><div class="faq-q">هل تُحفَظ نتائجي؟</div><div class="faq-a"><p>لا. إجاباتك تُعالَج بالكامل في متصفحك المحلي ولا تُرسَل لخوادمنا. نتيجتك خاصة بك تماماً.</p></div></div>
+      <div class="faq-item"><div class="faq-q">ماذا لو تغيرت نتيجتي بمرور الوقت؟</div><div class="faq-a"><p>هذا طبيعي تماماً. الأبعاد الأساسية نسبياً ثابتة، لكن إجاباتك قد تتغير مع تطور تجاربك الحياتية. ننصح بإعادة الاختبار بعد ستة أشهر لمقارنة النتائج.</p></div></div>
+      <div class="faq-item"><div class="faq-q">ما الفرق بين هذا الاختبار وـ MBTI؟</div><div class="faq-a"><p>نموذجنا يُركّز على ثلاثة أبعاد بدل أربعة، ما يُعطي ثمانية أنماط واضحة. كما يستخدم سلّم تدرج خماسي بدل الخيار الثنائي، وهو مُصمَّم خصيصاً للثقافة العربية في صياغة عباراته.</p></div></div>
+      <div class="faq-item"><div class="faq-q">هل الاختبار مجاني بالكامل؟</div><div class="faq-a"><p>نعم، الاختبار والتقرير الكامل مجانيان تماماً بدون أي قيود أو اشتراك مطلوب.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>جاهز لتكتشف نمطك؟</h2>
+      <p>ابدأ الآن مجاناً وتماماً بدون تسجيل. تقريرك ينتظرك في نهاية ٣٠ عبارة فقط.</p>
+      <a href="#quiz" class="btn-cta">ابدأ الاختبار المجاني ←</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>اكتشف نمطك</h4><p>منصة تحليل شخصية عربية مجانية مبنية على نموذج الأبعاد الثلاثة العلمي.</p></div>
+      <div class="footer-col"><h4>الأنماط الثمانية</h4><ul>
+        <li><a href="types/spl.html">SPL — المنظّم</a></li><li><a href="types/spe.html">SPE — الراعي</a></li>
+        <li><a href="types/scl.html">SCL — الاستراتيجي</a></li><li><a href="types/sce.html">SCE — المُلهم</a></li>
+        <li><a href="types/ipl.html">IPL — الحِرفي</a></li><li><a href="types/ipe.html">IPE — الحارس الهادئ</a></li>
+        <li><a href="types/icl.html">ICL — المُحلّل</a></li><li><a href="types/ice.html">ICE — الحالِم</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>الموقع</h4><ul>
+        <li><a href="pages/about.html">عن الموقع</a></li><li><a href="articles/index.html">المقالات</a></li>
+        <li><a href="career/index.html">التحليل المهني لكل الأنماط</a></li>
+        <li><a href="pages/contact.html">اتصل بنا</a></li><li><a href="pages/privacy.html">سياسة الخصوصية</a></li>
+      </ul></div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <span class="footer-bottom" style="font-size:13px;color:rgba(255,255,255,0.4);">© 2024 اكتشف نمطك — جميع الحقوق محفوظة</span>
+      <div style="display:flex;gap:20px;">
+        <a href="pages/privacy.html" style="font-size:13px;color:rgba(255,255,255,0.5);">سياسة الخصوصية</a>
+        <a href="pages/contact.html" style="font-size:13px;color:rgba(255,255,255,0.5);">اتصل بنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="assets/js/data.js"></script>
+<script>
+(function(){
+  const landing=document.getElementById('qLanding'),quizEl=document.getElementById('qQuiz'),resultEl=document.getElementById('qResult');
+  function showState(s){landing.style.display=s==='landing'?'block':'none';quizEl.style.display=s==='quiz'?'block':'none';resultEl.style.display=s==='result'?'block':'none';}
+  let step=0,responses=[];
+  const LVL=[{label:"موافق بشدة",value:2},{label:"موافق",value:1},{label:"محايد",value:0},{label:"غير موافق",value:-1},{label:"غير موافق بشدة",value:-2}];
+  const DLBL={energy:"مصدر الطاقة",process:"معالجة المعلومات",decision:"أساس القرار"};
+  function renderQ(){
+    const total=STATEMENTS.length,stmt=STATEMENTS[step],pct=Math.round((step/total)*100);
+    document.getElementById('qLabel').textContent=`العبارة ${step+1} من ${total}`;
+    document.getElementById('qPct').textContent=pct+'٪';
+    document.getElementById('progressFill').style.width=pct+'%';
+    document.getElementById('qDim').textContent=DLBL[stmt.dim];
+    document.getElementById('qText').textContent=stmt.text;
+    const wrap=document.getElementById('likertOptions');wrap.innerHTML='';
+    LVL.forEach(lv=>{const btn=document.createElement('button');btn.className='likert-opt';btn.innerHTML=`<span>${lv.label}</span><span class="dot"></span>`;btn.addEventListener('click',()=>ans(lv.value));wrap.appendChild(btn);});
+    document.getElementById('backBtn').style.visibility=step===0?'hidden':'visible';
+  }
+  function ans(v){responses[step]=v;if(step+1>=STATEMENTS.length){compute();}else{step++;renderQ();}}
+  document.getElementById('backBtn').addEventListener('click',()=>{if(step>0){step--;renderQ();}});
+  document.getElementById('startBtn').addEventListener('click',()=>{step=0;responses=[];showState('quiz');renderQ();document.getElementById('quiz').scrollIntoView({behavior:'smooth'});});
+  function compute(){
+    const sc={energy:0,process:0,decision:0};
+    STATEMENTS.forEach((s,i)=>{const eff=s.invert?-(responses[i]||0):(responses[i]||0);sc[s.dim]+=eff;});
+    const code=(sc.energy>=0?'S':'I')+(sc.process>=0?'P':'C')+(sc.decision>=0?'L':'E');
+    const mx=20,norm={energy:sc.energy/mx,process:sc.process/mx,decision:sc.decision/mx};
+    const matches=TYPE_KEYS.map(k=>{const l=k.split('');const te=l[0]==='S'?1:-1,tp=l[1]==='P'?1:-1,td=l[2]==='L'?1:-1;const diff=(Math.abs(norm.energy-te)+Math.abs(norm.process-tp)+Math.abs(norm.decision-td))/3;return{key:k,sim:Math.max(0,Math.min(100,Math.round((1-diff/2)*100)))};}).sort((a,b)=>b.sim-a.sim);
+    renderResult(code,matches);
+  }
+  function rP(id,arr){const el=document.getElementById(id);el.innerHTML='';arr.forEach(p=>{const d=document.createElement('p');d.textContent=p;el.appendChild(d);});}
+  function rL(id,arr){const el=document.getElementById(id);el.innerHTML='';arr.forEach(t=>{const li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
+  function renderResult(code,matches){
+    const type=TYPES[code]||TYPES[matches[0].key],fc=TYPES[code]?code:matches[0].key;
+    document.getElementById('rCode').textContent=fc;document.getElementById('rName').textContent=type.name;document.getElementById('rTagline').textContent=type.tagline;
+    rP('rOverview',type.overview);rL('rStrengths',type.strengths);rL('rChallenges',type.challenges);rP('rRelationships',type.relationships);rP('rCareerText',type.career);rL('rGrowth',type.growth);
+    const ct=document.getElementById('rCareerTags');ct.innerHTML='';type.careerTags.forEach(c=>{const s=document.createElement('span');s.className='ctag';s.textContent=c;ct.appendChild(s);});
+
+    const cd=CAREER_DEEP[fc];
+    if(cd){
+      const rc=document.getElementById('rIdealRoles');rc.innerHTML='';
+      cd.idealRoles.forEach(r=>{const div=document.createElement('div');div.className='role-card';div.innerHTML=`<div class="rc-title">${r.title}</div><div class="rc-why">${r.why}</div>`;rc.appendChild(div);});
+      rP('rCareerEnv',cd.environment);
+      document.getElementById('rCareerLead').textContent=cd.leadership;
+      const ci=document.getElementById('rCareerIndustries');ci.innerHTML='';
+      cd.industries.forEach(c=>{const s=document.createElement('span');s.className='ctag';s.textContent=c;ci.appendChild(s);});
+      rL('rCareerPitfalls',cd.pitfalls);
+      document.getElementById('rCareerGrowth').textContent=cd.growthPath;
+      document.getElementById('rCareerAvoid').textContent=cd.avoid;
+    }
+    document.getElementById('fullCareerLink').href='career/'+fc.toLowerCase()+'.html';
+
+    const mt=document.getElementById('matchTable');mt.innerHTML='';
+    matches.forEach(m=>{const t=TYPES[m.key];const row=document.createElement('div');row.className='mrow';row.innerHTML=`<span class="mn">${t.code} — ${t.name}</span><span class="mt"><span class="mf"></span></span><span class="mp">${m.sim}٪</span>`;mt.appendChild(row);setTimeout(()=>{row.querySelector('.mf').style.width=m.sim+'%';},100);});
+    document.getElementById('fullReportLink').href='types/'+fc.toLowerCase()+'.html';
+    showState('result');
+    document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  document.getElementById('restartBtn').addEventListener('click',()=>{step=0;responses=[];showState('landing');});
+  document.getElementById('copyBtn').addEventListener('click',()=>{
+    const code=document.getElementById('rCode').textContent,type=TYPES[code];if(!type)return;
+    const txt=`نتيجتي في اختبار "اكتشف نمطك": ${type.code} — ${type.name}\n${type.tagline}\n\nجرّب الاختبار مجاناً!`;
+    if(navigator.clipboard)navigator.clipboard.writeText(txt).then(showToast);else{const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast();}
+  });
+  function showToast(){const el=document.getElementById('toast');el.textContent='✅ تم نسخ ملخص النتيجة';el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200);}
+  document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open');});});
+  showState('landing');
+})();
+</script>
+<script src="assets/js/nav-toggle.js"></script>
+</body>
+</html>
