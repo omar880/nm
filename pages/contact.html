@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اتصل بنا — اكتشف نمطك</title>
+<meta name="description" content="تواصل مع فريق موقع اكتشف نمطك لأي سؤال أو اقتراح أو تعليق حول تحليل الشخصية أو محتوى الموقع.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon-180.png">
+<link rel="shortcut icon" href="../assets/images/favicon.ico">
+<meta property="og:title" content="اتصل بنا — اكتشف نمطك">
+<meta property="og:description" content="تواصل مع فريق موقع اكتشف نمطك لأي سؤال أو اقتراح أو تعليق حول تحليل الشخصية أو محتوى الموقع.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="اكتشف نمطك">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:url" content="https://yoursite.com/pages/contact.html">
+<meta property="og:image" content="https://yoursite.com/assets/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="اتصل بنا — اكتشف نمطك">
+<meta name="twitter:description" content="تواصل مع فريق موقع اكتشف نمطك لأي سؤال أو اقتراح أو تعليق حول تحليل الشخصية أو محتوى الموقع.">
+<meta name="twitter:image" content="https://yoursite.com/assets/images/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.contact-form{max-width:560px;margin:0 auto;}
+.form-group{margin-bottom:22px;}
+.form-group label{display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:13px 16px;border:1.5px solid var(--line-strong);border-radius:var(--radius-sm);font-family:inherit;font-size:15px;background:var(--white);color:var(--navy);transition:border .15s;}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);}
+.form-group textarea{min-height:140px;resize:vertical;}
+.form-note{background:var(--paper-warm);border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px 18px;font-size:14px;color:var(--gray);margin-bottom:28px;}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="mark">ن</div><div class="word">اكتشف نمطك</div></div>
+  <button class="nav-toggle" aria-label="القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav><a href="../index.html">الرئيسية</a><a href="about.html">عن الموقع</a><a href="../articles/index.html">مقالات</a><a href="../index.html#quiz" class="nav-cta">ابدأ الاختبار</a></nav>
+</header>
+<div style="background:var(--navy);color:var(--white);padding:48px 0;text-align:center;">
+  <h1 style="font-size:32px;">اتصل بنا</h1>
+  <p style="color:#C7CEDD;margin-top:8px;">نرحب بأسئلتك واقتراحاتك وتعليقاتك</p>
+</div>
+<div class="container-narrow" style="padding:52px 24px 80px;">
+  <div class="breadcrumb"><a href="../index.html">الرئيسية</a><span>›</span><span>اتصل بنا</span></div>
+  <div class="form-note">⚠️ هذا النموذج للتواصل العام فقط. إذا كان لديك سؤال عن نتيجة اختبارك، يمكنك إعادة الاختبار في أي وقت حيث لا نحتفظ بنتائج المستخدمين.</div>
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="form-group"><label for="cName">الاسم</label><input type="text" id="cName" name="name" placeholder="اسمك الكامل" required></div>
+    <div class="form-group"><label for="cEmail">البريد الإلكتروني</label><input type="email" id="cEmail" name="email" placeholder="email@example.com" required></div>
+    <div class="form-group"><label for="cSubject">موضوع الرسالة</label>
+      <select id="cSubject" name="subject">
+        <option value="سؤال عن الاختبار">سؤال عن الاختبار</option>
+        <option value="اقتراح لتحسين الموقع">اقتراح لتحسين الموقع</option>
+        <option value="الإبلاغ عن خطأ">الإبلاغ عن خطأ</option>
+        <option value="تعاون أو شراكة">تعاون أو شراكة</option>
+        <option value="أخرى">أخرى</option>
+      </select>
+    </div>
+    <div class="form-group"><label for="cMessage">رسالتك</label><textarea id="cMessage" name="message" placeholder="اكتب رسالتك هنا..." required></textarea></div>
+    <div id="cFormMsg" role="status" style="display:none;font-size:14px;border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:16px;"></div>
+    <button class="btn-primary" type="submit" style="width:100%;justify-content:center;">إرسال الرسالة ←</button>
+  </form>
+</div>
+<footer class="site-footer"><div class="container"><div class="footer-bottom">© 2024 اكتشف نمطك — جميع الحقوق محفوظة</div></div></footer>
+<script src="../assets/js/nav-toggle.js"></script>
+<script>
+(function(){
+  // ⚠️ استبدل هذا البريد ببريد التواصل الحقيقي لموقعك قبل النشر
+  var CONTACT_EMAIL = 'hello@yoursite.com';
+  var form = document.getElementById('contactForm');
+  var msgBox = document.getElementById('cFormMsg');
+
+  function showMsg(text, ok){
+    msgBox.textContent = text;
+    msgBox.style.display = 'block';
+    msgBox.style.background = ok ? '#EAF6EC' : '#FBEAEA';
+    msgBox.style.color = ok ? '#1E7A34' : '#B3261E';
+    msgBox.style.border = '1px solid ' + (ok ? '#BFE3C6' : '#F0C4C1');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var subject = form.subject.value;
+    var message = form.message.value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if(!name || !emailOk || !message){
+      showMsg('فضلاً عبّي الاسم والبريد الإلكتروني الصحيح والرسالة قبل الإرسال.', false);
+      return;
+    }
+
+    var body = 'الاسم: ' + name + '\nالبريد الإلكتروني: ' + email + '\n\nالرسالة:\n' + message;
+    var mailtoLink = 'mailto:' + CONTACT_EMAIL
+      + '?subject=' + encodeURIComponent('[اكتشف نمطك] ' + subject)
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailtoLink;
+    showMsg('راح يفتح تطبيق البريد عندك لإرسال الرسالة. إذا ما انفتح تلقائياً، راسلنا مباشرة على ' + CONTACT_EMAIL, true);
+  });
+})();
+</script>
+</body>
+</html>
