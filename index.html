@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>اكتشف نمطك | اختبار شخصية شامل — تحليل عميق وتقرير مفصّل</title>
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3447064927400915"
-     crossorigin="anonymous"></script>
 <meta name="description" content="اختبار شخصية شامل ومجاني يكشف نمطك من بين 8 أنماط، مع تقرير تفصيلي عن نقاط قوتك وتحدياتك وعلاقاتك ومسارك المهني. مبني على نموذج الأبعاد الثلاثة العلمي.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png">
@@ -145,6 +143,36 @@
 .btn-cta{background:linear-gradient(90deg,var(--gold),#E8C97A);color:var(--navy);font-weight:800;font-size:17px;padding:16px 44px;border-radius:8px;border:none;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block;}
 .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:var(--white);padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;opacity:0;transition:all .3s;z-index:50;pointer-events:none;white-space:nowrap;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+#shareCardBtn{background:linear-gradient(135deg,var(--gold),#8A4FC9 130%);color:#fff;border:none;position:relative;overflow:hidden;}
+#shareCardBtn:disabled{opacity:.7;cursor:wait;}
+.share-modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,14,26,0.82);z-index:200;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(2px);}
+.share-modal-overlay.show{display:flex;}
+.share-modal{background:var(--white);border-radius:18px;max-width:380px;width:100%;padding:20px;text-align:center;max-height:92vh;overflow:auto;}
+.share-modal img{width:100%;border-radius:12px;display:block;margin-bottom:16px;box-shadow:0 8px 28px rgba(0,0,0,.25);}
+.share-modal-actions{display:flex;gap:10px;}
+.share-modal-actions button{flex:1;padding:13px 10px;border-radius:8px;border:none;font-family:inherit;font-weight:700;font-size:14.5px;cursor:pointer;}
+.share-dl-btn{background:var(--navy);color:#fff;}
+.share-native-btn{background:var(--gold);color:var(--navy);}
+.share-close-btn{background:none;border:none;color:var(--gray);font-size:14px;margin-top:14px;cursor:pointer;font-family:inherit;text-decoration:underline;}
+
+.ai-ask-section{background:linear-gradient(135deg,rgba(201,149,44,0.06),rgba(27,42,74,0.04));border:1px solid rgba(201,149,44,0.25);}
+.ai-ask-note{color:var(--gray);font-size:14.5px;margin:4px 0 16px;}
+.ai-chat-log{display:flex;flex-direction:column;gap:10px;margin-bottom:14px;max-height:420px;overflow-y:auto;}
+.ai-chat-log:empty{display:none;}
+.ai-msg{max-width:88%;padding:12px 16px;border-radius:14px;font-size:14.5px;line-height:1.7;}
+.ai-msg.user{align-self:flex-start;background:var(--navy);color:#fff;border-bottom-right-radius:4px;}
+.ai-msg.ai{align-self:flex-end;background:var(--white);border:1px solid var(--line);border-bottom-left-radius:4px;}
+.ai-msg.ai.loading{color:var(--gray);font-style:italic;}
+.ai-msg.error{align-self:flex-end;max-width:88%;background:#FBEAEA;color:#B3261E;border:1px solid #F0C4C1;}
+.ai-suggest-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.ai-chip{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:8px 16px;font-size:13.5px;font-family:inherit;cursor:pointer;color:var(--navy);transition:all .15s;}
+.ai-chip:hover{border-color:var(--gold);background:rgba(201,149,44,0.08);}
+.ai-ask-form{display:flex;gap:10px;}
+.ai-ask-form input{flex:1;padding:13px 16px;border-radius:10px;border:1px solid var(--line);font-family:inherit;font-size:14.5px;}
+.ai-ask-form input:focus{outline:none;border-color:var(--gold);}
+.ai-ask-form button{background:var(--navy);color:#fff;border:none;border-radius:10px;padding:0 22px;font-family:inherit;font-weight:700;font-size:14.5px;cursor:pointer;}
+.ai-ask-form button:disabled{opacity:.6;cursor:wait;}
+.ai-ask-meta{font-size:12.5px;color:var(--gray);margin-top:8px;text-align:center;}
 @media(max-width:920px){.types-grid{grid-template-columns:repeat(2,1fr);}.method-grid{grid-template-columns:1fr 1fr;}.art-grid{grid-template-columns:repeat(2,1fr);}.why-grid{grid-template-columns:1fr;}.why-visual{display:none;}}
 @media(max-width:580px){.types-grid{grid-template-columns:repeat(2,1fr);gap:10px;}.art-grid{grid-template-columns:1fr;}.method-grid{grid-template-columns:1fr;}.quiz-frame{padding:22px 16px;}.cta-box{padding:36px 20px;}}
 </style>
@@ -314,7 +342,23 @@
         </div>
         <div class="result-section"><h3>🎯 مسار النمو</h3><ul class="r-list" id="rGrowth"></ul></div>
         <div class="result-section"><h3>📊 توزيع نتيجتك</h3><div id="matchTable"></div></div>
+        <div class="result-section ai-ask-section">
+          <h3>🤖 عندك سؤال عن نتيجتك؟</h3>
+          <p class="ai-ask-note">اسأل عن علاقاتك، شغلك، أو كيف تطوّر حالك — الإجابة مبنية على نتيجتك الفعلية.</p>
+          <div class="ai-chat-log" id="aiChatLog"></div>
+          <div class="ai-suggest-chips" id="aiSuggestChips">
+            <button type="button" class="ai-chip">كيف أتعامل مع نقاط ضعفي؟</button>
+            <button type="button" class="ai-chip">شو أفضل شريك حياة يناسبني؟</button>
+            <button type="button" class="ai-chip">نصيحة لتطوير مسيرتي المهنية؟</button>
+          </div>
+          <form class="ai-ask-form" id="aiAskForm">
+            <input type="text" id="aiQuestionInput" placeholder="اكتب سؤالك هنا..." maxlength="400" autocomplete="off">
+            <button type="submit" id="aiAskSubmit">إرسال</button>
+          </form>
+          <div class="ai-ask-meta" id="aiAskMeta"></div>
+        </div>
         <div class="ract">
+          <button class="btn-r" id="shareCardBtn">🎨 شارك نتيجتك كصورة</button>
           <button class="btn-r" id="copyBtn">📋 نسخ ملخص النتيجة</button>
           <button class="btn-r out" id="restartBtn">🔄 إعادة الاختبار</button>
         </div>
@@ -397,6 +441,17 @@
 </footer>
 
 <div class="toast" id="toast"></div>
+<canvas id="shareCanvas" width="1080" height="1920" style="display:none;"></canvas>
+<div class="share-modal-overlay" id="shareModalOverlay">
+  <div class="share-modal">
+    <img id="shareCardImg" alt="بطاقة نتيجتك في اختبار اكتشف نمطك">
+    <div class="share-modal-actions">
+      <button class="share-native-btn" id="shareNativeBtn" style="display:none;">📤 مشاركة</button>
+      <button class="share-dl-btn" id="shareDlBtn">⬇️ تنزيل الصورة</button>
+    </div>
+    <button class="share-close-btn" id="shareCloseBtn">إغلاق</button>
+  </div>
+</div>
 <script src="assets/js/data.js"></script>
 <script>
 (function(){
@@ -425,12 +480,14 @@
     const code=(sc.energy>=0?'S':'I')+(sc.process>=0?'P':'C')+(sc.decision>=0?'L':'E');
     const mx=20,norm={energy:sc.energy/mx,process:sc.process/mx,decision:sc.decision/mx};
     const matches=TYPE_KEYS.map(k=>{const l=k.split('');const te=l[0]==='S'?1:-1,tp=l[1]==='P'?1:-1,td=l[2]==='L'?1:-1;const diff=(Math.abs(norm.energy-te)+Math.abs(norm.process-tp)+Math.abs(norm.decision-td))/3;return{key:k,sim:Math.max(0,Math.min(100,Math.round((1-diff/2)*100)))};}).sort((a,b)=>b.sim-a.sim);
-    renderResult(code,matches);
+    renderResult(code,matches,norm);
   }
   function rP(id,arr){const el=document.getElementById(id);el.innerHTML='';arr.forEach(p=>{const d=document.createElement('p');d.textContent=p;el.appendChild(d);});}
   function rL(id,arr){const el=document.getElementById(id);el.innerHTML='';arr.forEach(t=>{const li=document.createElement('li');li.textContent=t;el.appendChild(li);});}
-  function renderResult(code,matches){
+  let lastResult=null;
+  function renderResult(code,matches,norm){
     const type=TYPES[code]||TYPES[matches[0].key],fc=TYPES[code]?code:matches[0].key;
+    lastResult={fc,type,norm,matches};
     document.getElementById('rCode').textContent=fc;document.getElementById('rName').textContent=type.name;document.getElementById('rTagline').textContent=type.tagline;
     rP('rOverview',type.overview);rL('rStrengths',type.strengths);rL('rChallenges',type.challenges);rP('rRelationships',type.relationships);rP('rCareerText',type.career);rL('rGrowth',type.growth);
     const ct=document.getElementById('rCareerTags');ct.innerHTML='';type.careerTags.forEach(c=>{const s=document.createElement('span');s.className='ctag';s.textContent=c;ct.appendChild(s);});
@@ -461,7 +518,254 @@
     const txt=`نتيجتي في اختبار "اكتشف نمطك": ${type.code} — ${type.name}\n${type.tagline}\n\nجرّب الاختبار مجاناً!`;
     if(navigator.clipboard)navigator.clipboard.writeText(txt).then(showToast);else{const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast();}
   });
-  function showToast(){const el=document.getElementById('toast');el.textContent='✅ تم نسخ ملخص النتيجة';el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200);}
+  function showToast(msg){const el=document.getElementById('toast');el.textContent=msg||'✅ تم نسخ ملخص النتيجة';el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200);}
+
+  // ---------- بطاقة المشاركة (Share Card) ----------
+  if(!CanvasRenderingContext2D.prototype.roundRect){
+    CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){
+      if(typeof r==='number')r={tl:r,tr:r,br:r,bl:r};
+      this.beginPath();
+      this.moveTo(x+r.tl,y);
+      this.lineTo(x+w-r.tr,y);this.arcTo(x+w,y,x+w,y+r.tr,r.tr);
+      this.lineTo(x+w,y+h-r.br);this.arcTo(x+w,y+h,x+w-r.br,y+h,r.br);
+      this.lineTo(x+r.bl,y+h);this.arcTo(x,y+h,x,y+h-r.bl,r.bl);
+      this.lineTo(x,y+r.tl);this.arcTo(x,y,x+r.tl,y,r.tl);
+      this.closePath();
+      return this;
+    };
+  }
+  const THEMES={
+    SPL:{grad:['#13213D','#2B4470'],accent:'#E8C97A'},
+    SPE:{grad:['#7A3B2E','#E08A52'],accent:'#FFEBD1'},
+    SCL:{grad:['#2C2350','#5B3E8C'],accent:'#F2C744'},
+    SCE:{grad:['#7A1F4B','#E8703A'],accent:'#FFE3A3'},
+    IPL:{grad:['#122E28','#2E6B58'],accent:'#D9C89A'},
+    IPE:{grad:['#152A3B','#38617A'],accent:'#CFE3EC'},
+    ICL:{grad:['#1C1F26','#3B5470'],accent:'#9FD8D3'},
+    ICE:{grad:['#241436','#4A3D8F'],accent:'#C9B6FF'}
+  };
+  const DIM_POLES=[
+    {key:'energy',label:'مصدر الطاقة',right:'اجتماعي',left:'مستقل'},
+    {key:'process',label:'معالجة المعلومات',right:'عملي',left:'مفاهيمي'},
+    {key:'decision',label:'أساس القرار',right:'منطقي',left:'عاطفي'}
+  ];
+
+  function wrapText(ctx,text,maxWidth){
+    const words=text.split(' '),lines=[];let cur='';
+    words.forEach(w=>{
+      const test=cur?cur+' '+w:w;
+      if(ctx.measureText(test).width>maxWidth&&cur){lines.push(cur);cur=w;}else{cur=test;}
+    });
+    if(cur)lines.push(cur);
+    return lines;
+  }
+
+  async function ensureFonts(){
+    const specs=["700 220px Lora","700 86px 'IBM Plex Sans Arabic'","400 34px 'IBM Plex Sans Arabic'",
+      "700 34px 'IBM Plex Sans Arabic'","600 30px 'IBM Plex Sans Arabic'","600 26px 'IBM Plex Sans Arabic'",
+      "700 40px 'IBM Plex Sans Arabic'"];
+    try{await Promise.all(specs.map(s=>document.fonts.load(s)));await document.fonts.ready;}catch(e){}
+  }
+
+  async function drawShareCard(result){
+    await ensureFonts();
+    const {fc,type,norm}=result,theme=THEMES[fc]||THEMES.SPL;
+    const canvas=document.getElementById('shareCanvas'),ctx=canvas.getContext('2d');
+    const W=canvas.width,H=canvas.height,M=90;
+    ctx.direction='rtl';
+
+    // خلفية متدرجة
+    const bg=ctx.createLinearGradient(0,0,W,H);
+    bg.addColorStop(0,theme.grad[0]);bg.addColorStop(1,theme.grad[1]);
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+
+    // دوائر زخرفية شفافة
+    ctx.globalAlpha=0.08;ctx.fillStyle='#FFFFFF';
+    ctx.beginPath();ctx.arc(120,H-160,340,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.arc(W-80,220,220,0,Math.PI*2);ctx.fill();
+    ctx.globalAlpha=1;
+
+    // العلامة أعلى البطاقة
+    ctx.fillStyle=theme.accent;ctx.font="700 34px 'IBM Plex Sans Arabic'";ctx.textAlign='center';
+    ctx.fillText('✦ اكتشف نمطك',W/2,140);
+
+    // كود النمط الكبير
+    ctx.fillStyle='#FFFFFF';ctx.font="700 220px Lora";ctx.textAlign='center';ctx.direction='ltr';
+    ctx.shadowColor='rgba(0,0,0,0.25)';ctx.shadowBlur=18;
+    ctx.fillText(fc,W/2,470);
+    ctx.shadowBlur=0;ctx.direction='rtl';
+
+    // اسم النمط
+    ctx.fillStyle='#FFFFFF';ctx.font="700 84px 'IBM Plex Sans Arabic'";
+    ctx.fillText(type.name,W/2,610);
+
+    // خط فاصل ذهبي
+    ctx.fillStyle=theme.accent;ctx.fillRect(W/2-45,650,90,5);
+
+    // الوصف (سطرين كحد أقصى)
+    ctx.fillStyle='rgba(255,255,255,0.88)';ctx.font="400 34px 'IBM Plex Sans Arabic'";
+    const taglineLines=wrapText(ctx,type.tagline,W-M*2).slice(0,2);
+    taglineLines.forEach((l,i)=>ctx.fillText(l,W/2,720+i*46));
+
+    // أشرطة الأبعاد الثلاثة
+    let barY=920;
+    DIM_POLES.forEach(d=>{
+      const trackW=W-M*2,trackX=M,n=norm[d.key]||0;
+      ctx.font="600 26px 'IBM Plex Sans Arabic'";ctx.fillStyle='rgba(255,255,255,0.65)';ctx.textAlign='center';
+      ctx.fillText(d.label,W/2,barY-22);
+
+      ctx.fillStyle='rgba(255,255,255,0.18)';
+      ctx.beginPath();ctx.roundRect(trackX,barY,trackW,10,5);ctx.fill();
+
+      const markerX=trackX+((1+n)/2)*trackW;
+      ctx.fillStyle=theme.accent;
+      ctx.beginPath();ctx.roundRect(Math.min(markerX,trackX+trackW/2),barY,Math.abs(markerX-(trackX+trackW/2)),10,5);ctx.fill();
+      ctx.beginPath();ctx.arc(markerX,barY+5,16,0,Math.PI*2);ctx.fill();
+
+      ctx.font="700 26px 'IBM Plex Sans Arabic'";ctx.fillStyle='#FFFFFF';
+      ctx.textAlign='right';ctx.fillText(d.right,trackX+trackW,barY+52);
+      ctx.textAlign='left';ctx.fillText(d.left,trackX,barY+52);
+      barY+=130;
+    });
+
+    // شرائح نقاط القوة
+    const chips=(type.strengths||[]).slice(0,2);
+    let chipY=barY+30;
+    ctx.font="600 28px 'IBM Plex Sans Arabic'";
+    chips.forEach(chip=>{
+      const text='✓ '+chip;
+      const tw=ctx.measureText(text).width,padX=28,chipW=tw+padX*2,chipH=58;
+      const chipX=W/2-chipW/2;
+      ctx.fillStyle='rgba(255,255,255,0.14)';
+      ctx.beginPath();ctx.roundRect(chipX,chipY,chipW,chipH,29);ctx.fill();
+      ctx.fillStyle='#FFFFFF';ctx.textAlign='center';
+      ctx.fillText(text,W/2,chipY+38);
+      chipY+=chipH+18;
+    });
+
+    // تذييل البطاقة
+    ctx.fillStyle=theme.accent;ctx.font="700 38px 'IBM Plex Sans Arabic'";ctx.textAlign='center';
+    ctx.fillText('جرّب الاختبار المجاني — اكتشف نمطك',W/2,H-130);
+    ctx.fillStyle='rgba(255,255,255,0.55)';ctx.font="400 26px 'IBM Plex Sans Arabic'";
+    ctx.fillText('yoursite.com',W/2,H-85);
+
+    return canvas.toDataURL('image/png');
+  }
+
+  const shareCardBtn=document.getElementById('shareCardBtn');
+  const shareModalOverlay=document.getElementById('shareModalOverlay');
+  const shareCardImg=document.getElementById('shareCardImg');
+  let lastCardDataUrl=null;
+
+  shareCardBtn.addEventListener('click',async()=>{
+    if(!lastResult)return;
+    const original=shareCardBtn.textContent;
+    shareCardBtn.disabled=true;shareCardBtn.textContent='⏳ جارِ تجهيز البطاقة...';
+    try{
+      lastCardDataUrl=await drawShareCard(lastResult);
+      shareCardImg.src=lastCardDataUrl;
+      shareModalOverlay.classList.add('show');
+      document.getElementById('shareNativeBtn').style.display=(navigator.canShare&&navigator.share)?'block':'none';
+    }catch(e){
+      showToast('⚠️ صار خطأ بتجهيز البطاقة، حاول مرة ثانية');
+    }finally{
+      shareCardBtn.disabled=false;shareCardBtn.textContent=original;
+    }
+  });
+  document.getElementById('shareCloseBtn').addEventListener('click',()=>shareModalOverlay.classList.remove('show'));
+  shareModalOverlay.addEventListener('click',e=>{if(e.target===shareModalOverlay)shareModalOverlay.classList.remove('show');});
+  document.getElementById('shareDlBtn').addEventListener('click',()=>{
+    if(!lastCardDataUrl)return;
+    const a=document.createElement('a');
+    a.href=lastCardDataUrl;a.download='نتيجتي-'+(lastResult?lastResult.fc:'نمطي')+'.png';
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+  });
+  document.getElementById('shareNativeBtn').addEventListener('click',async()=>{
+    if(!lastCardDataUrl)return;
+    try{
+      const blob=await (await fetch(lastCardDataUrl)).blob();
+      const file=new File([blob],'نتيجتي.png',{type:'image/png'});
+      if(navigator.canShare&&navigator.canShare({files:[file]})){
+        await navigator.share({files:[file],title:'اكتشف نمطك',text:'شوف نتيجتي بالشخصية!'});
+      }
+    }catch(e){/* المستخدم ألغى المشاركة أو المتصفح لا يدعمها */}
+  });
+
+  // ---------- دردشة "اسأل الذكاء الاصطناعي عن نتيجتك" ----------
+  const AI_SESSION_LIMIT = 8; // حد أقصى للأسئلة بالجلسة الواحدة (حماية بسيطة من سوء الاستخدام)
+  function aiQuestionsUsed(){ return parseInt(sessionStorage.getItem('aiQAsked')||'0',10); }
+  function aiIncrementUsed(){ sessionStorage.setItem('aiQAsked', String(aiQuestionsUsed()+1)); }
+
+  const aiChatLog=document.getElementById('aiChatLog');
+  const aiAskForm=document.getElementById('aiAskForm');
+  const aiQuestionInput=document.getElementById('aiQuestionInput');
+  const aiAskSubmit=document.getElementById('aiAskSubmit');
+  const aiAskMeta=document.getElementById('aiAskMeta');
+
+  function aiAddMsg(text,cls){
+    const div=document.createElement('div');
+    div.className='ai-msg '+cls;
+    div.textContent=text;
+    aiChatLog.appendChild(div);
+    aiChatLog.scrollTop=aiChatLog.scrollHeight;
+    return div;
+  }
+
+  function aiUpdateMeta(){
+    const left=Math.max(0,AI_SESSION_LIMIT-aiQuestionsUsed());
+    aiAskMeta.textContent=left>0?('باقيلك '+left+' سؤال بهالجلسة'):'وصلت للحد الأقصى من الأسئلة بهالجلسة — جرّب بعد شوي.';
+  }
+
+  async function aiAskQuestion(question){
+    if(!lastResult)return;
+    if(aiQuestionsUsed()>=AI_SESSION_LIMIT){aiUpdateMeta();return;}
+
+    aiAddMsg(question,'user');
+    const loadingMsg=aiAddMsg('...جارِ التفكير','ai loading');
+    aiAskSubmit.disabled=true;aiQuestionInput.disabled=true;
+
+    try{
+      const res=await fetch('/api/ask-ai',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          question,
+          typeCode:lastResult.fc,
+          typeName:lastResult.type.name,
+          typeTagline:lastResult.type.tagline,
+          overview:lastResult.type.overview,
+          strengths:lastResult.type.strengths,
+          challenges:lastResult.type.challenges
+        })
+      });
+      const data=await res.json();
+      loadingMsg.remove();
+      if(!res.ok){
+        aiAddMsg(data.error||'صار خطأ غير متوقع، حاول بعد شوي.','error');
+      }else{
+        aiAddMsg(data.answer,'ai');
+        aiIncrementUsed();
+      }
+    }catch(e){
+      loadingMsg.remove();
+      aiAddMsg('تعذّر الاتصال بالخدمة. تأكد من اتصالك بالإنترنت وحاول مرة ثانية.','error');
+    }finally{
+      aiAskSubmit.disabled=false;aiQuestionInput.disabled=false;aiQuestionInput.value='';
+      aiUpdateMeta();
+      aiQuestionInput.focus();
+    }
+  }
+
+  aiAskForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    const q=aiQuestionInput.value.trim();
+    if(q)aiAskQuestion(q);
+  });
+  document.querySelectorAll('.ai-chip').forEach(chip=>{
+    chip.addEventListener('click',()=>aiAskQuestion(chip.textContent.trim()));
+  });
+  aiUpdateMeta();
+
   document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const was=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!was)item.classList.add('open');});});
   showState('landing');
 })();
